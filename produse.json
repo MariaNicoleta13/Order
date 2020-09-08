@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Cheese",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Dairy",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Cherries",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Fruits",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Ciabatta",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Bread",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Clementine",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Fruits",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Fermented milk",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Dairy",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Grapes",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Fruits",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Ice-cream",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Dairy",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Orange",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Fruits",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Pomelo",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Fruits",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Sourdough",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Bread",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Watermelon",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Fruits",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Whole-Wheat Bread",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Bread",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  },
+  {
+    "name": "Yogurt",
+    "objKeys": {
+      "NUMAR": "5",
+      "TITLU": "Cheese",
+      "PRET": "1",
+      "TOTAL": 5,
+      "TIP": "Dairy",
+      "FAVORITE": "",
+      "STATUS": ""
+    }
+  }
+]

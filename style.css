@@ -1,0 +1,243 @@
+.mainContainer {
+  padding: 0;
+}
+/* table of content 
+  1.global styles
+  2.typography
+  3.components
+     3.1.navbar
+     3.2.category list
+     3.3.card
+     3.4.modal
+  4.media query
+*/
+
+/* ----------------------------------
+        1.global styles 
+-----------------------------------*/
+
+html {
+  height: 100%;
+}
+body {
+  height: inherit;
+  background: #159957; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #155799,
+    #159957
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #155799,
+    #159957
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* ----------------------------------
+          2.typography
+  -----------------------------------*/
+
+#caption-title,
+.modalTitle,
+.inputNo {
+  text-align: center;
+  font-weight: bold;
+}
+.list-group {
+  font-weight: bold;
+}
+.modalTitle {
+  font-size: large;
+  color: #164d8d;
+}
+.mySubmitButton,
+.totalRow {
+  text-align: center;
+}
+
+/* ----------------------------------
+          3.components
+  -----------------------------------*/
+
+/* ----------------------------------
+          3.1.navbar
+  -----------------------------------*/
+
+header {
+  height: 50px;
+  margin-bottom: 20px;
+}
+#navbarButton {
+  margin-right: 0;
+}
+
+/* ----------------------------------
+          3.2.category list
+  -----------------------------------*/
+
+.list-group-item:hover {
+  cursor: pointer;
+}
+
+/* ----------------------------------
+          3.3.card
+  -----------------------------------*/
+.card {
+  min-width: 255px;
+}
+.myProduct {
+  margin-bottom: 2em;
+}
+.mycardTitle {
+  text-align: center;
+}
+.thumbnail {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+#ThumbnailImg {
+  max-width: 100%;
+  height: 210px;
+  margin: 0 auto;
+}
+
+#buyButton,
+.NoProdus {
+  float: right;
+}
+.btnUnfavor {
+  background-color: rgba(46, 105, 46, 0.3);
+  color: white;
+}
+.btnUnfavor:hover {
+  color: white;
+}
+.myPriceCol {
+  padding-right: 0;
+}
+.increaseNumber {
+  color: rgb(33, 131, 93);
+}
+.increaseNumberBtn {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 0;
+}
+.inputNo {
+  padding: 0;
+  width: 30px;
+  display: inline-block;
+  color: rgb(0, 102, 51) !important;
+  background-color: rgba(145, 206, 145, 0.3) !important;
+  height: 20px;
+}
+.totalRow {
+  max-width: 100%;
+  margin-left: 0;
+  border-top: 1px solid rgba(58, 128, 85, 0.3);
+}
+.totalDirectiva {
+  font-size: 1.5em;
+}
+
+/* ----------------------------------
+          3.4.modal
+  -----------------------------------*/
+
+.modalTitle::first-letter {
+  color: #085a34;
+}
+.iconTitleModal {
+  float: left;
+  padding-right: 10px;
+}
+.modalUppRemove {
+  float: right;
+  color: #164d8d;
+}
+.modalUppRemove:hover {
+  cursor: pointer;
+}
+.pointer {
+  cursor: pointer;
+  color: rgb(87, 207, 171);
+}
+.modalHeader {
+  background: #159957;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(83, 165, 248, 0.5),
+    rgba(101, 245, 173, 0.5)
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(83, 165, 248, 0.7),
+    rgba(101, 245, 173, 0.7)
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-bottom: 1px solid #061a2e;
+  display: block;
+  width: 100%;
+}
+.modalBody {
+  background: #159957;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #155799, #159957);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #155799, #159957);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow-y: scroll;
+  height: 650px;
+}
+#modalImage {
+  height: 200px;
+}
+.myCard {
+  padding-bottom: 1.5em;
+}
+.myCardTitle {
+  height: 3em;
+  /* background-color: pink; */
+  font-size: 1.5em;
+  text-align: center;
+}
+.myModalRow {
+  text-align: center;
+}
+.modalFooter {
+  background: #159957;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0d355e, #0b522e);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0d355e, #0b522e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-top: 1px solid #061a2e;
+}
+.modalRemoveBtn {
+  padding-top: 4.3px;
+}
+.mySubmitButton {
+  width: 100%;
+  display: flex;
+  text-align: end;
+}
+.myH2Modal {
+  width: 50%;
+}
+.footerTotal {
+  color: black;
+  margin-right: 17px;
+  display: inline-block;
+}
+
+/* ----------------------------------
+          4.media query
+  -----------------------------------*/
+
+@media screen and (max-width: 768px) {
+  #myList {
+    margin-bottom: 20px;
+  }
+}

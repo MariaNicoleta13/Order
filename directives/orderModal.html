@@ -1,0 +1,93 @@
+<div class="modal-header modalHeader">
+  <div class="row">
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+      <h3 class="modal-title modalTitle" id="modal-title">
+        Your shopping list
+      </h3>
+    </div>
+
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <i
+        class="fa fa-times modalUppRemove"
+        aria-hidden="true"
+        ng-click="cancel()"
+      ></i>
+    </div>
+  </div>
+</div>
+
+<div class="modal-body modalBody" id="modal-body">
+  <div class="row">
+    <div
+      class="col-sm-12 col-md-12 col-lg-6 myCard"
+      ng-repeat="produs in produse"
+    >
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card" id="thumbnail">
+          <img
+            ng-src="resources/img/{{produs.name}}.jpg"
+            alt="..."
+            id="modalImage"
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h2 id="card-title" class="myCardTitle">{{produs.name}}</h2>
+
+            <div class="row myModalRow">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h4 ng-if="produs.objKeys.PRET">
+                  <strong>Total: </strong>
+                  <span class="label label-success">
+                    {{produs.objKeys.TOTAL}}
+                  </span>
+                </h4>
+              </div>
+
+              <div
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modalRemoveBtn"
+              >
+                <a
+                  href="#"
+                  ng-class="{'btn btn-success modalRemoveBtnLink':'true'}"
+                  role="button"
+                  ng-click="setBoughtStatus(produs,$event)"
+                >
+                  <i
+                    aria-hidden="true"
+                    ng-class="{'glyphicon glyphicon-ban-circle':'true'}"
+                  >
+                  </i>
+                  Remove
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6"></div>
+  </div>
+</div>
+
+<div class="modal-footer modalFooter">
+  <div class="mySubmitButton">
+    <h4 class="myH2Modal footerTotal">
+      <strong>Total: </strong>
+      <span class="label label-success">
+        {{sumOfTotals(produse)}}
+      </span>
+    </h4>
+    <a
+      href="#"
+      ng-class="{'btn btn-success ':'true'}"
+      role="button"
+      ng-click="submitOrder(produse)"
+    >
+      <i aria-hidden="true" ng-class="{'fa fa-heartbeat':'true'}"></i>
+      Submit
+    </a>
+  </div>
+</div>

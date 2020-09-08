@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="orderApp">
+  <head>
+    <title>Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- angular -->
+    <script src="lib/AngularJSv1.5.2.js"></script>
+    <script src="app.js"></script>
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <!-- uibmodal  -->
+    <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <!-- directives -->
+    <script src="directives/myProduct.js"></script>
+    <script src="directives/orderModalCtrl.js"></script>
+    <!-- filters -->
+    <script src="filters/filterProduse.js"></script>
+    <script src="filters/filterDate.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid mainContainer">
+      <div ng-controller="OrderCtrl">
+        <!-- class="row" -->
+        <header>
+          <!-- <div class="container"> -->
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <i class="fa fa-leaf" aria-hidden="true"></i> FoodZone</a
+              >
+
+              <button
+                type="button"
+                class="btn btn-default btn-light"
+                ng-click="openModal()"
+              >
+                <!-- class="btn btn-default navbar-btn navbar-right"
+                id="navbarButton"
+                ng-click="actions.openOrderModal()" -->
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                Your order
+              </button>
+            </div>
+          </nav>
+          <!-- </div> -->
+        </header>
+        <div class="container" id="myList">
+          <div class="row">
+            <div class="col-md-3" id="myList">
+              <div class="list-group">
+                <a
+                  ng-class="{'list-group-item':'true','active':!search}"
+                  ng-click="Sort($event)"
+                  >All</a
+                >
+                <a
+                  ng-class="{'list-group-item':'true','active':(search=='Bread')}"
+                  ng-click="Sort($event)"
+                  >Bread</a
+                >
+                <a
+                  ng-class="{'list-group-item':'true','active':(search=='Dairy')}"
+                  ng-click="Sort($event)"
+                  >Dairy</a
+                >
+                <a
+                  ng-class="{'list-group-item':'true','active':(search=='Fruits')}"
+                  ng-click="Sort($event)"
+                  >Fruits</a
+                >
+                <a
+                  ng-class="{'list-group-item':'true','active':(search=='Favorites')}"
+                  ng-click="Sort($event)"
+                  >Favorites</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+              ng-repeat="produs in produse |filterProduse:search"
+            >
+              <!-- |filterProduse:search -->
+              <!-- aici e directiva de produs -->
+              <!-- <directiva-produs produs="produs |filterDate"></directiva-produs> -->
+              <my-product produs="produs |filterDate"></my-product>
+            </div>
+          </div>
+        </div>
+        <!-- <p>This is the body</p> -->
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<div class="myProduct">
+    <div class="card" id="thumbnail">
+        <img
+          ng-src="resources/img/{{produs.name}}.jpg"
+          alt="..."
+          id="ThumbnailImg"
+          class="card-img-top"
+        />
+    
+        <div class="card-body myCaption">
+          <h5 class="card-title mycardTitle">{{produs.name}}</h5>
+          <p>
+    
+            <a
+              href="#"
+              ng-click="setFavorite(produs,$event)"
+              ng-if="!produs.objKeys.FAVORITE"
+              ng-class="{'btn btn-success favoriteButton':'true'}"
+              role="button"
+            >
+              <i
+                aria-hidden="true" class="fa fa-heart"
+              ></i>
+              
+              Favorite
+            </a>
+    
+            <a
+              href="#"
+              ng-click="setFavorite(produs,$event)"
+              ng-if="produs.objKeys.FAVORITE"
+              ng-class="{'btn btnUnfavor':'true'}"
+              role="button"
+            >
+              <i
+                aria-hidden="true"
+                ng-class="{'fa fa-heart-o':'true'}"
+              ></i>
+              UnFavor
+            </a>
+    
+            <!-- pentru buy -->
+            <a
+              href="#"
+              class="btn btn-success"
+              ng-if="!produs.objKeys.STATUS"
+              id="buyButton"
+              role="button"
+              ng-click="setBoughtStatus(produs,$event) "
+            >
+              <i class="fa fa-credit-card" aria-hidden="true"> </i>
+              Buy
+            </a>
+    
+            <a
+              href="#"
+              ng-class="{'btn btnUnfavor ':'true'}"
+              ng-if="produs.objKeys.STATUS"
+              id="buyButton"
+              role="button"
+              ng-click="setBoughtStatus(produs,$event)"
+            >
+              <i class="fa fa-minus-square-o" aria-hidden="true"> </i>
+              Remove
+            </a>
+    
+          </p>
+    
+          <div class="row">
+    
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 myPriceCol">
+              <h5 ng-if="produs.objKeys.PRET" 
+                  class="pricePerUnit">
+    
+                <strong>Price: </strong>
+    
+                <span class="label label-success">
+                  {{produs.objKeys.PRET}}
+                </span>
+              </h5>
+            </div>
+    
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8"  >
+              <h5 class="NoProdus ">
+                <a
+                  href="#"
+                  class="btn increaseNumberBtn"
+                  role="button"
+                  ng-click="modifyNumber(produs,1,$event)"
+                >
+                  <i
+                    class="fa fa-plus increaseNumber"
+                    aria-hidden="true"
+                  >
+                  </i>
+                </a>
+                <strong>No: </strong>
+                <input 
+                  type="text"
+                  ng-class="{'form-control inputNo':'true'}"
+               
+                  ng-change="setInput(produs)"
+                  ng-model="produs.objKeys.NUMAR"             
+                 >
+                </input>
+    
+                <a
+                  href="#"
+                  class="btn 
+                        increaseNumberBtn"
+                  role="button"
+                  ng-click="modifyNumber(produs,-1,$event)"
+                >
+                  <i
+                    class="fa fa-minus increaseNumber"
+                    aria-hidden="true"
+                  >
+                  </i>
+                </a>
+    
+              </h5>
+    
+            </div>
+            <!-- end of the col -->
+          </div>
+        </div>
+        
+        <div class="row totalRow">
+    
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 ng-if="produs.objKeys.TOTAL" class="totalDirectiva">
+              <strong>Total: </strong>
+              <span class="label label-success">{{produs.objKeys.TOTAL}}</span>
+            </h3>  
+          </div>
+        </div>
+    
+      </div>
+</div>
